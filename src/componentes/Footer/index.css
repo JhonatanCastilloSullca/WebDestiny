@@ -1,0 +1,37 @@
+.vertigo-trekking-quote {
+    color: #888;
+    font-family: var(--font-po);
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+    background: url(../src/assets/images/footer-vertigo-transparent2.png) bottom center repeat-x;
+    padding: 6rem 0;
+    background-size: unset;
+    background-repeat: repeat-x;
+    background-position: bottom center;
+}
+
+.vertigo-trekking-quote {
+    background-image: url(../../assets/images/footer-vertigo-transparent2.png);
+    background-size: cover;
+    background-color: #fff;
+    min-height: 52rem;
+    background-size: unset;
+    background-repeat: repeat-x;
+    background-position: bottom center;
+}
+
+.copy-text-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy-text-footer>p {
+    padding: 10px;
+    margin: 0;
+    color: var(--light);
+    font-size: 14px;
+    font-weight: 200;
+}

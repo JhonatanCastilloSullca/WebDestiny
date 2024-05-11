@@ -1,0 +1,146 @@
+.Booking-box {
+    width: 100% !important;
+}
+
+.cardInfo {
+    margin: 0 !important;
+    padding: 30px 0 0 15px !important;
+}
+
+.login-box {
+    margin-bottom: 0 !important;
+}
+
+.Booking-box {
+    border-top: 3px solid var(--primary) !important;
+    box-shadow: none !important;
+    border: 1px solid #eee;
+}
+
+.thanksYou .cardInfo {
+    margin: 0 !important;
+    padding: 30px 0 30px 0px !important;
+}
+
+.login-box .cardInfo {
+    margin-bottom: 30px !important;
+}
+
+.login-box .cardInfo h3 {
+    padding: 0 0 0 0 !important;
+}
+
+.height-circle-wizard {
+    width: 50px;
+    height: 50px;
+}
+
+.item_image_product {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.description-text-nombre-tour {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--gray);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.description-text-categoria-tour {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gray);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.description-text-fecha-tour {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gray);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.description-text-ubicaciones-tour {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--gray);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.precio-cart-product {
+    position: relative;
+    padding-right: 60px;
+}
+
+.description-cart-product {
+    display: grid;
+    justify-items: start;
+}
+
+.description-text-precio-tour {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--gray);
+    margin: 0;
+    padding: 0;
+}
+
+.description-text-subtotal-tour {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--gray);
+    margin: 0;
+    padding: 0;
+}
+
+.img-contenido {
+    display: flex;
+    gap: 40px;
+}
+
+.btn-left-cart {
+    border-left: solid 1px #d8d8d8 !important;
+    border-radius: 16px 0 0 16px !important;
+    border-top: solid 1px #d8d8d8 !important;
+    border-bottom: solid 1px #d8d8d8 !important;
+    border-right: none !important;
+    padding: 0 10px 0 10px !important;
+}
+
+.btn-right-cart {
+    border-right: solid 1px #d8d8d8 !important;
+    border-radius: 0 16px 16px 0 !important;
+    border-top: solid 1px #d8d8d8 !important;
+    border-bottom: solid 1px #d8d8d8 !important;
+    padding: 0px 10px 0px 10px !important;
+    border-left: none !important;
+
+}
+
+.input-text-cart-number {
+    border: none !important;
+    border-bottom: solid 1px #d8d8d8 !important;
+    border-top: solid 1px #d8d8d8 !important;
+    border-left: none !important;
+    max-width: 35px !important;
+    text-align: center;
+    color: var(--primary) !important;
+    padding: 0 !important;
+    height: 40px !important;
+    box-shadow: none !important;
+}
+
+.cart-notificacion-terminos {
+    font-size: 12px;
+    font-weight: bolder;
+    color: var(--primary);
+}

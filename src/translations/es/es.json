@@ -1,0 +1,52 @@
+{
+    "header": {
+        "home": "Inicio",
+        "about": "Nosotros",
+        "contact": "Contacto",
+        "search": "Buscar Tours...",
+        "cart": "Carrito"
+    },
+    "buttons": {
+        "revisa-nuestros-tours": "Revisa nuestros tours",
+        "no-se-encontraron": "No se encontraron tours"
+    },
+    "destinos": {
+        "nuestros-paquetes": "Nuestros paquetes a nivel nacional",
+        "selecciona-tu-destino-favorito": "Selecciona tu destino favorito"
+    },
+    "tours": {
+        "destinos": "Destinos",
+        "nuestros-tours": "Nuestros Tours",
+        "revisa-nuestros-tours": "Revisa nuestros tours"
+    },
+    "about": {
+        "sobre-nosotros": "Sobre Nosotros"
+    },
+    "testimonios": {
+        "testimonios": "Testimonios",
+        "comentario-turisticos": "Comentarios Turisticos",
+        "mensaje-testimonio": "Somos una empresa cusqueña dinámica que genera experiencias turísticas de calidad en turismo cultural, de naturaleza, de aventura y comunitario. Con más de 10 años diseñando productos turísticos en el sur del Perú, ofrecemos una oferta diversificada y contribuimos a la preservación cultural y natural de nuestro país. Además capacitamos constantemente a nuestro personal y aliados estratégicos en nuestros diferentes destinos, lo que nos permite garantizar altos estándares de calidad."
+    },
+    "nosotros": {
+        "nosotros": "Nosotros",
+        "sobre-nosotros": "Sobre Nosotros"
+    },
+    "contacto": {
+        "contactanos": "Contactanos",
+        "ubicacion-nuestro-local": "Ubicanos en Nuestro Local",
+        "numero-contacto": "Numero de Contacto",
+        "direaccion-email": "Dirección de Email"
+    },
+    "formulario": {
+        "nombre": "Nombre",
+        "email": "Email",
+        "celular": "Celular",
+        "asunto": "Asunto",
+        "mensaje": "Mensaje",
+        "enviar-mensaje": "Enviar Mensaje"
+    },
+    "error": {
+        "no-se-encontro-tour": "No se encontró el tour",
+        "tour-no-existe": "El tour no existe"
+    }
+}

@@ -1,0 +1,9 @@
+.lightbox-certificados {
+    position: fixed !important;
+    inset: 0px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    z-index: 999 !important;
+}

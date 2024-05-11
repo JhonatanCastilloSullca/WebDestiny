@@ -1,0 +1,23 @@
+.incluye-tours {
+    color: #6c6c6c;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.img-nosotros {
+    height: 600px;
+}
+
+.tbl-razon-social {
+    background-color: #fff;
+    margin: 0px 2px 0px 2px;
+    border-bottom: solid;
+    border-bottom-color: inherit;
+    border-bottom-width: 1px;
+    line-height: 2rem;
+}
+
+.info-nosotros-terms {
+    height: 350px;
+    align-content: center;
+}

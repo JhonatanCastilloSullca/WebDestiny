@@ -1,0 +1,31 @@
+.cart {
+    background: var(--white);
+    display: none;
+    padding: 32px;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.cart li {
+    border-bottom: 1px solid #444;
+    padding-bottom: 16px;
+}
+
+
+
+
+.cart-button~input:checked~.cart {
+    height: 100%;
+    display: block;
+}
+
+.button-cart {
+    background: var(--primary) !important;
+}
+
+.footer-cart {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}

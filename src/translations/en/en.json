@@ -1,0 +1,52 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About Us",
+        "contact": "Contact",
+        "search": "Search Tours...",
+        "cart": "Cart"
+    },
+    "buttons": {
+        "revisa-nuestros-tours": "Check our tours",
+        "no-se-encontraron": "No tours found"
+    },
+    "destinos": {
+        "nuestros-paquetes": "Our packages nationwide",
+        "selecciona-tu-destino-favorito": "Select your favorite destination"
+    },
+    "tours": {
+        "destinos": "Destinations",
+        "nuestros-tours": "Our Tours",
+        "revisa-nuestros-tours": "Check our tours"
+    },
+    "about": {
+        "sobre-nosotros": "About Us"
+    },
+    "testimonios": {
+        "testimonios": "Testimonials",
+        "comentario-turisticos": "Tourist Comments",
+        "mensaje-testimonio": "We are a dynamic Cusco company that generates quality tourist experiences in cultural, nature, adventure and community tourism. With more than 10 years designing tourist products in southern Peru, we offer a diversified offer and contribute to the cultural and natural preservation of our country. We also constantly train our staff and strategic allies in our different destinations, which allows us to guarantee high quality standards."
+    },
+    "nosotros": {
+        "nosotros": "Us",
+        "sobre-nosotros": "About Us"
+    },
+    "contacto": {
+        "contactanos": "Contact us",
+        "ubicacion-nuestro-local": "Find us at our location",
+        "numero-contacto": "Contact number",
+        "direaccion-email": "Emai Address"
+    },
+    "formulario": {
+        "nombre": "Name",
+        "email": "E-mail",
+        "celular": "Cell phone",
+        "asunto": "Affair",
+        "mensaje": "Message",
+        "enviar-mensaje": "Send Message"
+    },
+    "error": {
+        "no-se-encontro-tour": "Tour not found",
+        "tour-no-existe": "The tour does not exist"
+    }
+}

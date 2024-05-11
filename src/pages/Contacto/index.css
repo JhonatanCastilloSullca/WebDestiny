@@ -1,0 +1,22 @@
+.icon-contact {
+    width: 100px;
+    height: 100px;
+    background: var(--primary);
+    margin: 0 auto;
+    margin-bottom: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.icon-fa {
+    color: var(--light);
+    font-size: 30px;
+}
+
+.box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+}

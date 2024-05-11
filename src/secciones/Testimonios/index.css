@@ -1,0 +1,17 @@
+.ti-stars {
+    color: #00af87;
+}
+
+.icon-container {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container svg {
+    width: 100%;
+    height: 100%;
+}

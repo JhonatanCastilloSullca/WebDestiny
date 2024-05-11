@@ -1,0 +1,110 @@
+.principal-hero-title {
+    color: white;
+    text-align: center;
+}
+
+.principal-hero-title h1 {
+    padding-top: 60px;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    color: var(--light);
+}
+
+.principal-hero-text {
+    font-size: 14px;
+    max-width: 700px;
+    margin-bottom: 0px;
+    width: 80%;
+}
+
+.best-tour-operator-hero {
+    display: flex;
+    align-items: center;
+}
+
+.world-travel-awards-seal2 {
+    width: 80px;
+    margin: 30px 10px;
+}
+
+.world-travel-awards-seal5 {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.button-hero {
+    padding: 16px 32px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button-hero span {
+    font-weight: bold;
+}
+
+.button-hero:hover {
+    background-color: var(--primary) !important;
+    color: var(--light) !important;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.section-description {
+    width: 800px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 992px) {
+    .principal-hero-title h1 {
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
+
+    .principal-hero-text {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .best-tour-operator-hero {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
