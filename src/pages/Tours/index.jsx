@@ -1,4 +1,4 @@
-import { Accordion, Card, Col, Container, Row } from "react-bootstrap"
+import { Accordion, Card, Col, Container, Row, Tab, Tabs } from "react-bootstrap"
 import './index.css'
 import CardTours from "../../componentes/CardTours"
 import { useParams } from "react-router-dom"
@@ -12,6 +12,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { DotLoader } from "react-spinners";
+import { BsCalendar, BsCheckCircle, BsEnvelope, BsInfoCircle } from "react-icons/bs";
+import FormularioContacto from "../../secciones/FormularioContacto";
+import { useState } from "react";
 
 
 function ToursPage() {
@@ -22,13 +25,23 @@ function ToursPage() {
     const requestOptions = {
         method: 'POST',
     };
+    const [validated, setValidated] = useState(false);
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        setValidated(true);
+    };
 
 
-    const { data: tourData, loading, error } = useFetch(`http://192.168.1.22/api/tour-slug?slug=${tourId}`, requestOptions);
+    const { data: tourData, loading, error } = useFetch(`https://api.vertigotravelperu.com/api/tour-slug?slug=${tourId}`, requestOptions);
 
     if (loading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <DotLoader color="#f79633" loading={true} size={100} />
+            <DotLoader color="#00b5c4" loading={true} size={100} />
         </div>
     </div>;
     if (error) return <div className="mainloader">
@@ -86,7 +99,7 @@ function ToursPage() {
                 </Swiper>
 
             </div>
-            <Container className="bg-brown mw-100">
+            <Container className="bg-primary mw-100">
                 <ToursInfoSection
                     titulo={tourData.nombre}
                     duracion={tourData.duracion}
@@ -95,10 +108,17 @@ function ToursPage() {
                 />
             </Container>
             <div className="ftco-section services-section pt-4 descriptio-tour-container">
-                <div className="container p-4">
-                    <div className="row d-flex">
-
-                        <div className="col-md-8 heading-section">
+                <Container className="p-4">
+                    <Row>
+                        <Col md={6}>
+                            <CardFormulario tour={tourData} />
+                        </Col>
+                        <Col md={6} className="video-iframe">
+                            <iframe width="600" height="300" src="https://www.youtube.com/embed/8J6J-5E3JVA" title="Machupicchu en 10 Segundos - Victor Class" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                        </Col>
+                    </Row>
+                    <Row className="ftco-section d-flex">
+                        <Col md={12} className="heading-section">
                             <div className="w-100">
                                 {tourData.nombre && tourData.descripcion && (
                                     <Container className="mt-4">
@@ -106,53 +126,44 @@ function ToursPage() {
                                         <div className="incluye-tours" dangerouslySetInnerHTML={{ __html: tourData.descripcion }}></div>
                                     </Container>
                                 )}
-                                {detallesTourDias && detallesTourDias.length > 0 && (
-                                    <Container className="mt-4 ">
-                                        <h3 className="box-title m-0">Itinerario</h3>
-                                        <Accordion defaultActiveKey="0" className="pt-4">
-                                            {detallesTourDias && detallesTourDias.map((detalle, index) => (
-                                                <Accordion.Item key={index} eventKey={String(index)}>
-                                                    <Accordion.Header>
-                                                        <h6 className="fw-bold text-primary">Día {index + 1}: {detalle.titulo}</h6>
-                                                    </Accordion.Header>
-                                                    <Accordion.Body>
-                                                        <div className="incluye-tours" dangerouslySetInnerHTML={{ __html: detalle.descripcion }}></div>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            ))}
-                                        </Accordion>
-                                    </Container>
-                                )}
-
-                                {tourData.galeria && tourData.galeria.length > 0 && (
-                                    <Container className="mt-4">
-                                        <h3 className="box-title m-0">Galería</h3>
-                                        <Row>
-                                            {tourData.galeria.map((imagenUrl, index) => (
-                                                <Col key={index} md={4} className="d-flex justify-content-center mb-4">
-                                                    <Card className="border-0">
-                                                        <Card.Img variant="top" src={imagenUrl} className="galeria-imagen" />
-                                                    </Card>
-                                                </Col>
-                                            ))}
-                                        </Row>
-                                    </Container>
-                                )}
                             </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="row gap-4">
-                                <CardFormulario tour={tourData} />
+                        </Col>
+
+                    </Row>
+                    <Tabs defaultActiveKey="itinerario" id="justify-tab-content" className="mb-3" justify>
+                        <Tab className="" eventKey="itinerario" title={<span className="tabs-tour"><BsCalendar /> Itinerario</span>}>
+                            {detallesTourDias && detallesTourDias.length > 0 && (
+                                <Container className="mt-4">
+                                    <h3 className="box-title m-0">Itinerario</h3>
+                                    <Accordion defaultActiveKey="0" className="pt-4">
+                                        {detallesTourDias.map((detalle, index) => (
+                                            <Accordion.Item key={index} eventKey={String(index)}>
+                                                <Accordion.Header>
+                                                    <h6 className="fw-bold text-primary">Día {index + 1}: {detalle.titulo}</h6>
+                                                </Accordion.Header>
+                                                <Accordion.Body>
+                                                    <div className="incluye-tours" dangerouslySetInnerHTML={{ __html: detalle.descripcion }}></div>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        ))}
+                                    </Accordion>
+                                </Container>
+                            )}
+                        </Tab>
+                        <Tab className="" eventKey="informacion" title={<span className="tabs-tour"><BsInfoCircle /> Informacion</span>}>
+                            <Row className="gap-4">
                                 {tourData.tamaño_grupo || tourData.Lugar_de_Recojo || tourData.ubicaciones || (tourData.Idiomas_Disponibles && tourData.Idiomas_Disponibles.length > 0) ? (
-                                    <Card>
+                                    <Card className="border-0">
                                         <Card.Body>
                                             <h3 className="box-title">Información del Tour</h3>
                                             <TourInformation tourData={tourData} />
                                         </Card.Body>
                                     </Card>
                                 ) : null}
-                            </div>
-                            <div className="row gap-4 mt-4">
+                            </Row>
+                        </Tab>
+                        <Tab className="" eventKey="incluye" title={<span className="tabs-tour"><BsCheckCircle /> Incluye</span>}>
+                            <Row className="gap-4 mt-4">
                                 <Accordion defaultActiveKey="0" className="p-0">
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header className="incluye-accordion "><h3 className="box-title border-0 mb-0">Incluye</h3></Accordion.Header>
@@ -167,8 +178,10 @@ function ToursPage() {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>
-                            </div>
-                            <div className="row gap-4 mt-4">
+                            </Row>
+                        </Tab>
+                        <Tab className="" eventKey="no-incluye" title={<span className="tabs-tour"><BsCheckCircle /> No Incluye</span>}>
+                            <Row className="gap-4 mt-4">
                                 <Accordion defaultActiveKey="0" className="p-0">
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header className="incluye-accordion "><h3 className="box-title border-0 mb-0">No Incluye</h3></Accordion.Header>
@@ -185,8 +198,10 @@ function ToursPage() {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>
-                            </div>
-                            <div className="row gap-4 mt-4">
+                            </Row>
+                        </Tab>
+                        <Tab className="" eventKey="que-llevar" title={<span className="tabs-tour"><BsCheckCircle /> Que llevar</span>}>
+                            <Row className="gap-4 mt-4">
                                 <Accordion defaultActiveKey="0" className="p-0">
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header className="incluye-accordion "><h3 className="box-title border-0 mb-0">Qué Llevar</h3></Accordion.Header>
@@ -198,17 +213,21 @@ function ToursPage() {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            </Row>
+                        </Tab>
+                        <Tab className="" eventKey="contact" title={<span className="tabs-tour"><BsEnvelope /> Contact</span>} >
+                            <FormularioContacto handleSubmit={handleSubmit} />
+
+                        </Tab>
+                    </Tabs>
+                </Container>
                 <Container>
                     <h3 className="box-title m-0">Tours Relacionados</h3>
                     <Row className="pt-4">
                         <CardTours md={4} />
                     </Row>
                 </Container>
-            </div >
+            </div>
         </>
     )
 }

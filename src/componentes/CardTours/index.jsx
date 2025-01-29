@@ -3,7 +3,7 @@ import { GiDuration } from "react-icons/gi";
 import { AiOutlineTeam } from "react-icons/ai";
 import { NavLink } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
-import { FaClock, FaLocationDot, FaRightLong } from 'react-icons/fa6';
+import { FaCar, FaClock, FaLocationDot, FaRightLong } from 'react-icons/fa6';
 import { FaLongArrowAltRight, FaUserFriends } from 'react-icons/fa';
 
 function CardTours({ tours, md }) {
@@ -17,7 +17,33 @@ function CardTours({ tours, md }) {
                         className={`col-md-${md} pt-4`}
                     >
                         <Card className=" border-0 bg-transparent">
-                            <Card.Img variant="top" className='bg-gray img-card-style' src={tour.imagenprincipal} />
+                            <div className="img-container">
+                                <Card.Img
+                                    variant="top"
+                                    className='bg-gray img-card-style'
+                                    src={tour.imagenprincipal}
+                                />
+                            </div>
+
+
+                            <div className="description-card-top">
+                                <div className="ba-meta d-flex justify-content-center">
+                                    <div className="meta-left d-flex gap-2 align-items-center">
+                                        <div className='d-flex align-items-center'>
+                                            <FaClock className='me-1' />
+                                            <span>{tour.duracion} {tour.unidad}</span>
+                                        </div>
+                                        <div className='d-flex align-items-center border-end border-start px-2'>
+                                            <FaUserFriends className='me-1' />
+                                            <span>{tour.tamaño_grupo} Max</span>
+                                        </div>
+                                        <div className='d-flex align-items-center'>
+                                            <FaCar className='me-1' />
+                                            <span>Movilidad Privada</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <Card.Body className='body-card'>
                                 <Card.Title className='body-card-tittle'>{tour.nombre}</Card.Title>
                                 <Card.Title className='ubicaciones-card-tittle d-flex align-items-center'>
@@ -37,19 +63,7 @@ function CardTours({ tours, md }) {
                                     <div className="text-precio-card"> Precio: </div>
                                     <div className="text-precio-data px-2"> {tour.precio}</div>
                                 </div>
-                                <div className="m-2">
-                                    <div className="ba-meta">
-                                        <div className="meta-left d-flex gap-2 align-items-center">
-                                            <FaClock />
-                                            <span>{tour.duracion} {tour.unidad}</span>
-                                            <FaUserFriends />
-                                            <span>{tour.tamaño_grupo} Max</span>
-                                        </div>
-                                        <div className="meta-right">
-                                            <FaRightLong className='text-primary ver-tour' />
-                                        </div>
-                                    </div>
-                                </div>
+
                             </Card.Body>
                         </Card>
                     </NavLink>

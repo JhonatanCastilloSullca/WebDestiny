@@ -1,20 +1,39 @@
 .body-card {
     margin: 0 2px;
     margin-top: -20px;
-    border-radius: 10px 10px 3px 3px;
     background: #FFF;
     box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0px 10px 10px;
 }
 
 .img-card-style {
     height: 250px;
     border-radius: 3px;
+    transition: 2s ease;
 }
 
+.img-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+
+.img-card-style {
+    transition: transform 10s ease;
+    height: 250px;
+    object-fit: cover;
+}
+
+.img-container:hover .img-card-style {
+    transform: scale(3);
+}
+
+
 .body-card-tittle {
-    font-size: 18px !important;
+    font-size: 17px !important;
     font-weight: bold !important;
     height: 45px;
 }
@@ -31,6 +50,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     height: 50px;
+    font-size: 12px;
+    color: var(--gray);
 }
 
 .text-precio-card {
@@ -49,9 +70,9 @@
 .ba-meta {
     margin-top: 20px;
     padding: 10px 18px;
-    background: #FAF8F4;
+    background: var(--primary);
     border-radius: 6px;
-    width: 100%;
+    width: 97%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -60,10 +81,18 @@
     justify-content: space-between;
     font-size: 14px;
     font-weight: 500;
+    margin: 20px auto 0px auto;
+}
+
+.description-card-top {
+    margin: 0 !important;
+    z-index: 9;
+    margin-top: -40px !important;
+
 }
 
 .meta-left {
-    color: var(--gray)
+    color: var(--light)
 }
 
 .ver-tour {

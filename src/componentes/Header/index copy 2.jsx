@@ -86,12 +86,12 @@ function Header() {
         body: JSON.stringify({
         })
     };
-    const { data, loading, error } = useFetch("http://192.168.1.22/api/categorias", requestOptions);
+    const { data, loading, error } = useFetch("https://api.vertigotravelperu.com/api/categorias", requestOptions);
     const categorias = data;
     window.addEventListener('scroll', changeBackground);
     if (loading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <DotLoader color="#f79633" loading={true} size={100} />
+            <DotLoader color="#00b5c4" loading={true} size={100} />
         </div>
     </div>;
     if (error) return <div className="mainloader">

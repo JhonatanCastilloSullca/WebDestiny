@@ -75,7 +75,7 @@ function Footer() {
             <Row className='m-0 p-0 bg-dark'>
                 <div className="col-md-12 text-center copy-text-footer">
                     <p>
-                        Cusco Insight
+                        Destiny Travel
                     </p>
                 </div>
             </Row>

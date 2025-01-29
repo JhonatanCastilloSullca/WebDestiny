@@ -126,3 +126,41 @@
         transition-duration: 0s;
     }
 }
+
+.destination-banner {
+    position: relative;
+
+}
+
+.destination-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Ajusta el color y la opacidad del overlay según tus preferencias */
+}
+
+.content {
+    position: relative;
+    /* Asegura que el contenido esté sobre el overlay */
+    z-index: 1;
+    /* Asegura que el contenido esté encima del overlay */
+    color: white;
+    /* Ajusta el color del texto si es necesario */
+}
+
+.container-text-destinos {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+}
+
+.container-destinos-padding-top {
+    padding-top: 150px !important;
+}

@@ -75,7 +75,7 @@ function CardFormulario({ tour }) {
                                 <span>Pax:</span>
                                 <Form.Control
                                     type="text"
-                                    placeholder="1"
+                                    placeholder="0"
                                     className={`input-formulario fs-12 ${error.pax ? 'is-invalid' : ''}`}
                                     value={pax}
                                     onChange={handlePaxChange}

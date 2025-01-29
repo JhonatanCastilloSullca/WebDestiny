@@ -34,7 +34,7 @@ function InfoItem({ icono, titulo, contenido }) {
                 <span className="icono-check-white h2">{icono}</span>
             </div>
             <div className="icono-diarios-text">
-                <p className="m-0 text-primary text-tour-page-descriptions"><b>{titulo}</b></p>
+                <p className="m-0  text-tour-page-descriptions"><b>{titulo}</b></p>
                 <span>{contenido}</span>
             </div>
         </div>

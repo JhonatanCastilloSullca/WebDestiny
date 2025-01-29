@@ -4,7 +4,8 @@
         "about": "Nosotros",
         "contact": "Contacto",
         "search": "Buscar Tours...",
-        "cart": "Carrito"
+        "cart": "Carrito",
+        "inicio-header": "¿A dónde te gustaría ir?"
     },
     "buttons": {
         "revisa-nuestros-tours": "Revisa nuestros tours",
@@ -33,7 +34,7 @@
     },
     "contacto": {
         "contactanos": "Contactanos",
-        "ubicacion-nuestro-local": "Ubicanos en Nuestro Local",
+        "ubicacion-nuestro-local": "Nuestro local ubicado",
         "numero-contacto": "Numero de Contacto",
         "direaccion-email": "Dirección de Email"
     },

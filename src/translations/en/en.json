@@ -4,7 +4,8 @@
         "about": "About Us",
         "contact": "Contact",
         "search": "Search Tours...",
-        "cart": "Cart"
+        "cart": "Cart",
+        "inicio-header": "Where would you like to go?"
     },
     "buttons": {
         "revisa-nuestros-tours": "Check our tours",
@@ -29,7 +30,8 @@
     },
     "nosotros": {
         "nosotros": "Us",
-        "sobre-nosotros": "About Us"
+        "sobre-nosotros": "About Us",
+        "por-que-elegir": "Por que elegir"
     },
     "contacto": {
         "contactanos": "Contact us",

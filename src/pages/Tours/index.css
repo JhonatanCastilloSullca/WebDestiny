@@ -292,3 +292,16 @@
 .altura-tours {
     margin-top: 115px;
 }
+
+.video-iframe {
+    display: flex;
+    align-items: center;
+}
+
+.tabs-tour {
+    color: var(--gray) !important;
+}
+
+.nav-link.active>.tabs-tour {
+    color: var(--primary) !important;
+}

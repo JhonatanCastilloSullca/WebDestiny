@@ -57,12 +57,12 @@ function CertificadoCarousel({ general }) {
                     className="mySwiperDestiny"
                 >
                     {
-                        general.images.map((certificados) => (
+                        general.detalles.map((certificados) => (
                             <SwiperSlide key={certificados.id}>
                                 <img
-                                    src={certificados.nombre}
+                                    src={certificados.url}
                                     className='slider-image-home'
-                                    onClick={() => handleImageClick(certificados.nombre)}
+                                    onClick={() => handleImageClick(certificados.urlabrir)}
                                     alt="Nature"
                                 />
                             </SwiperSlide>

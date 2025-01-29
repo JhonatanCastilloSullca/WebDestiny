@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 function PaquetePage() {
     const { t } = useTranslation();
     const { general: GeneralData } = useContext(GeneralContext);
-    const cabeceraTipo = GeneralData.certificados[0];
+    const cabeceraTipo = GeneralData.certificados;
 
 
     const params = useParams();
@@ -24,13 +24,13 @@ function PaquetePage() {
         method: 'POST',
 
     };
-    const { data: paqueteData, loading, error } = useFetch(`http://192.168.1.22/api/ubicacion-slug?language_id=1&slug=${paqueteSlug}`, requestOptions);
+    const { data: paqueteData, loading, error } = useFetch(`https://api.vertigotravelperu.com/api/ubicacion-slug?language_id=1&slug=${paqueteSlug}`, requestOptions);
 
 
 
     if (loading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <DotLoader color="#f79633" loading={true} size={100} />
+            <DotLoader color="#00b5c4" loading={true} size={100} />
         </div>
     </div>;
     if (error) return <div className="mainloader">
@@ -50,7 +50,7 @@ function PaquetePage() {
                 <Container className="position-relative">
                     <Row className="js-altoheight d-flex justify-content-center align-items-center">
                         <div className="principal-hero-title d-flex flex-column justify-content-center align-items-center">
-                            <h1>EXPLORA Y CONOCE "{paqueteData.nombre}" CON Cusco Insight</h1>
+                            <h1>EXPLORA Y CONOCE "{paqueteData.nombre}" CON Destiny Travel</h1>
                             <p className="principal-hero-text">{paqueteData.descripcion}</p>
 
                             <div className="hero-buttons-container">
@@ -70,7 +70,7 @@ function PaquetePage() {
                 <Container className="text-center">
                     <Row className="mb-4">
                         <div className="d-flex flex-column justify-content-center align-items-center">
-                            <h1 className="section-title"> Los mejores tours en "{paqueteData.nombre}" con Cusco Insight</h1>
+                            <h1 className="section-title"> Los mejores tours en "{paqueteData.nombre}" con Destiny Travel</h1>
                             <p className="section-description">
                                 Somos una empresa cusqueña dinámica que genera experiencias turísticas de calidad en turismo cultural, de naturaleza, de aventura y comunitario. Con más de 10 años diseñando productos turísticos en el sur del Perú, ofrecemos una oferta diversificada y contribuimos a la preservación cultural y natural de nuestro país. Además capacitamos constantemente a nuestro personal y aliados estratégicos en nuestros diferentes destinos, lo que nos permite garantizar altos estándares de calidad.
                             </p>

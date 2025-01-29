@@ -10,11 +10,14 @@ import { useFetch } from '../../Hook/useFetch';
 import { GeneralContext } from '../../context/general';
 import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 function HeroSection() {
 
 
     const { general: GeneralData } = useContext(GeneralContext);
+
     const cabeceraTipo = GeneralData.cabecera.tipo;
+    const { t } = useTranslation("translation");
     return (
         <>
             <div className='w-100 position-relative'>
@@ -41,7 +44,7 @@ function HeroSection() {
                     <Container>
                         <div className="sub-title"><span className="tagline">Vamos a explorar</span></div>
                         <div className='text-title-hero'>
-                            ¿A dónde te gustaría ir?
+                            {t("header.inicio-header")}
                         </div >
                         <div className="title-desc">Consulte lugares hermosos alrededor del Perú.</div>
                     </Container>

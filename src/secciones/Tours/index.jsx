@@ -15,17 +15,19 @@ function getRandomTours(tours, count) {
 }
 function Tours() {
     const { t } = useTranslation();
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : null;
+
     const requestOptions = {
         method: 'POST',
         body: {
-            language_id: 1
+            language_id: languageId,
         }
     };
-    const { data, loading, error } = useFetch("http://192.168.1.22/api/tours", requestOptions);
+    const { data, loading, error } = useFetch("https://api.vertigotravelperu.com/api/tours", requestOptions);
     const ToursData = data;
     if (loading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <DotLoader color="#f79633" loading={true} size={100} />
+            <DotLoader color="#00b5c4" loading={true} size={100} />
         </div>
     </div>;
     if (error) return <div className="mainloader">

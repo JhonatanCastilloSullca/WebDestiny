@@ -9,17 +9,16 @@ import { DotLoader } from "react-spinners"
 function ToursArchive() {
 
 
-
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : null;
     const requestOptions = {
         method: 'POST',
-
         body: {
-            language_id: 1
+            language_id: languageId
         }
     };
 
-    const { data: GeneralData, loading: generalLoading, error: generalError } = useFetch("http://192.168.1.22/api/categorias", requestOptions);
-    const { data: tourData, loading: tourLoading, error: tourError } = useFetch("http://192.168.1.22/api/tours", requestOptions);
+    const { data: GeneralData, loading: generalLoading, error: generalError } = useFetch("https://api.vertigotravelperu.com/api/categorias", requestOptions);
+    const { data: tourData, loading: tourLoading, error: tourError } = useFetch("https://api.vertigotravelperu.com/api/tours", requestOptions);
 
 
     const [filteredCount, setFilteredCount] = useState(0);
@@ -110,7 +109,7 @@ function ToursArchive() {
 
     if (tourLoading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <DotLoader color="#f79633" loading={true} size={100} />
+            <DotLoader color="#00b5c4" loading={true} size={100} />
         </div>
     </div>;
     if (tourError) return <div>Error: {tourError.message}</div>;
@@ -124,7 +123,7 @@ function ToursArchive() {
                 <div className="container p-3">
                     <div className="row no-gutters slider-text js-mediumheight align-items-center">
                         <div className="col-md-7 ">
-                            <span className="subheading">Bienvenido a Cusco Insight</span>
+                            <span className="subheading">Bienvenido a Destiny Travel</span>
                             <p className="caps">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nulla, ex nobis culpa iusto rem itaque consequatur illum fugiat dolore consequuntur saepe sapiente provident. Quod accusantium quidem fuga dolores architecto! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, voluptatibus alias. Sit nisi, tenetur voluptate recusandae esse numquam unde quo corporis ad laborum? Sed excepturi, tenetur odit fugiat libero molestiae?</p>
                         </div>
                     </div>

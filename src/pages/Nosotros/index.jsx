@@ -14,6 +14,7 @@ import { FaClockRotateLeft } from 'react-icons/fa6';
 import About from '../../secciones/About';
 import Testimonios from '../../secciones/Testimonios';
 import { useTranslation } from 'react-i18next';
+import AboutComplete from '../../secciones/AboutComplete';
 
 
 
@@ -26,10 +27,9 @@ function NosotrosPage() {
         clearCart();
     }, []);
     const { general } = useContext(GeneralContext);
-    const GeneralData = general.nosotros[0];
-    console.log("🚀 ~ NosotrosPage ~ GeneralData:", GeneralData)
+    const GeneralData = general.nosotros;
 
-    const cabeceraTipo = general.certificados[0];
+    const cabeceraTipo = general.certificados;
 
     return (
         <>
@@ -44,7 +44,7 @@ function NosotrosPage() {
                     </Row>
                 </Container>
             </div>
-            <About />
+            <AboutComplete />
             <div className="ftco-section services-section pt-4 descriptio-tour-container">
                 <Container>
                     <Row>

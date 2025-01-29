@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 function Servicios() {
     const { general } = useContext(GeneralContext);
-    const GeneralData = general.nosotros[0];
+    const GeneralData = general.nosotros;
     const { t } = useTranslation("translation");
     return (
         <>

@@ -20,7 +20,7 @@ function CheckOutValid() {
     }, []);
     const { general } = useContext(GeneralContext);
     const GeneralData = general.nosotros;
-    const cabeceraTipo = general.certificados[0];
+    const cabeceraTipo = general.certificados;
 
 
     const requestOptions = {
@@ -28,12 +28,12 @@ function CheckOutValid() {
         body: JSON.stringify({
         })
     };
-    const { data, loading, error } = useFetch(`http://192.168.1.22/api/confirmar-pago?id=${id}`, requestOptions);
+    const { data, loading, error } = useFetch(`https://api.vertigotravelperu.com/api/confirmar-pago?id=${id}`, requestOptions);
 
     const blogs = data;
     if (loading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <DotLoader color="#f79633" loading={true} size={100} />
+            <DotLoader color="#00b5c4" loading={true} size={100} />
         </div>
     </div>;
     if (error) return <div className="mainloader">
@@ -61,7 +61,7 @@ function CheckOutValid() {
                         <Card className="m-2">
                             <div className="d-grid justify-content-around w-100 m-auto p-2">
                                 <h1>Tu reserva ha sido aceptada con exito</h1>
-                                <h4>Un agente de Cusco Insight se pondra en contacto con usted</h4>
+                                <h4>Un agente de Destiny Travel se pondra en contacto con usted</h4>
                                 <Card className="mt-4">
                                     <Card.Body>
                                         <h5 className="card-title">Recibo de Pago</h5>

@@ -18,7 +18,7 @@ function CheckOutPage() {
     const subtotal = calculateSubtotal();
     const { general } = useContext(GeneralContext);
     const GeneralData = general.nosotros;
-    const cabeceraTipo = general.certificados[0];
+    const cabeceraTipo = general.certificados;
     const paises = general.paises;
     const handleIncrement = (item) => {
         updatePax(item.id, Number(Number(item.pax) + 1), (Number(Number(item.pax) + 1) * Number(item.precio)));
@@ -105,7 +105,7 @@ function CheckOutPage() {
                     cliente: formData,
                     total: subtotal
                 };
-                const response = await fetch('http://192.168.1.22/api/niubiz', {
+                const response = await fetch('https://api.vertigotravelperu.com/api/niubiz', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
