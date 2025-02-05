@@ -157,13 +157,13 @@ function Header() {
                                     id="language-selector"
                                     variant="transparent"
                                     className="nav-link p-0 bg-transparent"
-                                    title={<><span className="ml-2">{i18n.language === 'es' ? <img src="../../src/assets/images/iconos/pe.svg" className='flags text-white' alt="Perú" /> : <img src="../../src/assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />}</span></>}
+                                    title={<><span className="ml-2">{i18n.language === 'es' ? <img src="../../assets/images/iconos/pe.svg" className='flags text-white' alt="Perú" /> : <img src="../../assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />}</span></>}
                                 >
                                     <Dropdown.Item onClick={() => handleChangeLng('es')}>
-                                        <img src="../../src/assets/images/iconos/pe.svg" className='flags' alt="Perú" />Español
+                                        <img src="../../assets/images/iconos/pe.svg" className='flags' alt="Perú" />Español
                                     </Dropdown.Item>
                                     <Dropdown.Item onClick={() => handleChangeLng('en')}>
-                                        <img src="../../src/assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />English
+                                        <img src="../../assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />English
                                     </Dropdown.Item>
                                 </DropdownButton>
                             </li>

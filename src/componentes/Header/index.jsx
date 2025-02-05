@@ -188,13 +188,13 @@ function Header() {
                                         id="language-selector"
                                         variant="transparent"
                                         className="nav-link p-0 bg-transparent"
-                                        title={<><span className="ml-2">{i18n.language === 'es' ? <img src="../../src/assets/images/iconos/pe.svg" className='flags text-white' alt="Perú" /> : <img src="../../src/assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />}</span></>}
+                                        title={<><span className="ml-2">{i18n.language === 'es' ? <img src="../../assets/images/iconos/pe.svg" className='flags text-white' alt="Perú" /> : <img src="../../assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />}</span></>}
                                     >
                                         <Dropdown.Item onClick={() => handleChangeLng('es')}>
-                                            <img src="../../src/assets/images/iconos/pe.svg" className='flags' alt="Perú" />Español
+                                            <img src="../../assets/images/iconos/pe.svg" className='flags' alt="Perú" />Español
                                         </Dropdown.Item>
                                         <Dropdown.Item onClick={() => handleChangeLng('en')}>
-                                            <img src="../../src/assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />English
+                                            <img src="../../assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />English
                                         </Dropdown.Item>
                                     </DropdownButton>
                                 </li>
@@ -208,7 +208,7 @@ function Header() {
                     <Row className='w-100 m-0 fixed-navbar navbar' >
                         <Col md={12} className='bg-white d-flex justify-content-center align-items-center p-2'>
                             <Container className='d-flex justify-content-between'>
-                                <Image src="../src/assets/images/destiny-logo-horizontal-2.webp" height={'70px'} rounded />
+                                <Image src="../assets/images/destiny-logo-horizontal-2.webp" height={'70px'} rounded />
                                 <Container className='container-contets'>
                                     <Row className='justify-content-end d-grid'>
                                         <Nav className="col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -303,13 +303,13 @@ function Header() {
                                         id="language-selector"
                                         variant="transparent"
                                         className="nav-link p-0 bg-transparent"
-                                        title={<><span className="ml-2">{i18n.language === 'es' ? <img src="../../src/assets/images/iconos/pe.svg" className='flags text-white' alt="Perú" /> : <img src="../../src/assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />}</span></>}
+                                        title={<><span className="ml-2">{i18n.language === 'es' ? <img src="../../assets/images/iconos/pe.svg" className='flags text-white' alt="Perú" /> : <img src="../../assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />}</span></>}
                                     >
                                         <Dropdown.Item onClick={() => handleChangeLng('es')}>
-                                            <img src="../../src/assets/images/iconos/pe.svg" className='flags' alt="Perú" />Español
+                                            <img src="../../assets/images/iconos/pe.svg" className='flags' alt="Perú" />Español
                                         </Dropdown.Item>
                                         <Dropdown.Item onClick={() => handleChangeLng('en')}>
-                                            <img src="../../src/assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />English
+                                            <img src="../../assets/images/iconos/us.svg" className='flags' alt="Estados Unidos" />English
                                         </Dropdown.Item>
                                     </DropdownButton>
                                 </li>
