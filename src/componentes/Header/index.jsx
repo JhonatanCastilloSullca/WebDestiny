@@ -198,9 +198,9 @@ function Header() {
                                         </Dropdown.Item>
                                     </DropdownButton>
                                 </li>
-                                <li className="nav-item d-flex align-items-center text-white">
+                                {/* <li className="nav-item d-flex align-items-center text-white">
                                     <Cart></Cart>
-                                </li>
+                                </li> */}
                             </Nav>
                         </Col>
                     </Row>
@@ -215,7 +215,7 @@ function Header() {
                                             <Nav.Item>
                                                 <NavLink href="#" className="px-2 py-0 text-gray"><FaRegEnvelope className='text-primary' /> destinytravel@gmail.com</NavLink>
                                             </Nav.Item>
-                                            <Nav.Item>
+                                            {/* <Nav.Item>
                                                 <NavLink href="#" className="px-2 py-0 text-gray">Blog</NavLink>
                                             </Nav.Item>
                                             <Nav.Item>
@@ -223,25 +223,25 @@ function Header() {
                                             </Nav.Item>
                                             <Nav.Item>
                                                 <NavLink href="#" className="px-2 py-0 text-gray">Contactenos</NavLink>
-                                            </Nav.Item>
+                                            </Nav.Item> */}
                                         </Nav>
                                         <Nav className="col-12 col-md-auto justify-content-center pt-2 gap-2 align-items-center">
-                                            <Nav.Item>
+                                            {/* <Nav.Item>
                                                 <NavLink className="px-2 text-gray">
                                                     <FaCalendar className='text-primary' /> Lun-Sab 9am - 7pm PE
                                                 </NavLink>
-                                            </Nav.Item>
+                                            </Nav.Item> */}
                                             <Nav.Item>
                                                 <NavLink href="#" className="px-2 text-gray">
                                                     <FaPhoneAlt className='text-primary' /> +51 922 572 478
                                                 </NavLink>
                                             </Nav.Item>
-                                            <Nav.Item>
+                                            {/* <Nav.Item>
                                                 <Button variant="primary">Reserve Ahora</Button>
                                             </Nav.Item>
                                             <Nav.Item>
                                                 <Button variant="primary">Camino Inca</Button>
-                                            </Nav.Item>
+                                            </Nav.Item> */}
                                         </Nav>
                                     </Row>
                                 </Container>
@@ -313,9 +313,9 @@ function Header() {
                                         </Dropdown.Item>
                                     </DropdownButton>
                                 </li>
-                                <li className="nav-item d-flex align-items-center text-white">
+                                {/* <li className="nav-item d-flex align-items-center text-white">
                                     <Cart></Cart>
-                                </li>
+                                </li> */}
                             </Nav>
                         </Col>
                     </Row >
