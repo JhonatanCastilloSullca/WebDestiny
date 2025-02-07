@@ -52,8 +52,8 @@ function CardFormulario({ tour }) {
                     <h3 className="box-title">Reserva con nosotros</h3>
                     <div>
                         <h2 className="producto-tittle-information text-center text-primary">{tour.nombre}</h2>
-                        <p className="text-muted text-center"><span className="text-danger h2 fw-bolder">{tour.precio}</span> x pax</p>
-                        <div className="d-flex flex-column">
+                        {/* <p className="text-muted text-center"><span className="text-danger h2 fw-bolder">{tour.precio}</span> x pax</p> */}
+                        {/* <div className="d-flex flex-column">
                             <div className="div-formulario">
                                 <span>Fecha:</span>
                                 <Form.Control
@@ -69,8 +69,8 @@ function CardFormulario({ tour }) {
                                     {error.fecha}
                                 </div>
                             )}
-                        </div>
-                        <div className="d-flex flex-column">
+                        </div> */}
+                        {/* <div className="d-flex flex-column">
                             <div className="div-formulario">
                                 <span>Pax:</span>
                                 <Form.Control
@@ -87,16 +87,19 @@ function CardFormulario({ tour }) {
                                     {error.pax}
                                 </div>
                             )}
-                        </div>
+                        </div> */}
                     </div>
                     <div className="submit_group">
-                        <button onClick={handleSubmit} className="booking_form_submit">
+                        {/* <button onClick={handleSubmit} className="booking_form_submit">
                             {
                                 isToursInCart
                                     ? "Quitar de la reserva"
                                     : "Reservar Ahora"
                             }
-                        </button>
+                        </button> */}
+                        <a href="https://wa.me/+51939383158" target="_blank" className="booking_form_submit text-center">
+                            Reserva este Tour
+                        </a>
                     </div>
                 </Card.Body>
             </Card>

@@ -17,8 +17,8 @@ function Home() {
             <Servicios />
             <Destinos />
             <Tours />
-            <Parallax />
-            <About />
+            {/* <Parallax /> */}
+            {/* <About /> */}
             <Testimonios />
             {/* <Blog /> */}
             <Certificados />

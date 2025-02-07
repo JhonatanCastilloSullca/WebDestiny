@@ -116,6 +116,12 @@
     width: 100%;
 }
 
+.booking_form_submit:hover {
+    color: #FFF;
+    font-weight: 900;
+    font-size: 17px;
+}
+
 .card-information-tour {
     display: flex;
     justify-content: flex-start;

@@ -109,16 +109,14 @@ function ToursPage() {
             </Container>
             <div className="ftco-section services-section pt-4 descriptio-tour-container">
                 <Container className="p-4">
-                    <Row>
+                    <Row className="pb-4 mb-4">
                         <Col md={6}>
                             <CardFormulario tour={tourData} />
                         </Col>
-                        <Col md={6} className="video-iframe">
+                        {/* <Col md={6} className="video-iframe">
                             <iframe width="600" height="300" src="https://www.youtube.com/embed/8J6J-5E3JVA" title="Machupicchu en 10 Segundos - Victor Class" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-                        </Col>
-                    </Row>
-                    <Row className="ftco-section d-flex">
-                        <Col md={12} className="heading-section">
+                        </Col> */}
+                        <Col md={6} className="heading-section">
                             <div className="w-100">
                                 {tourData.nombre && tourData.descripcion && (
                                     <Container className="mt-4">
@@ -128,7 +126,6 @@ function ToursPage() {
                                 )}
                             </div>
                         </Col>
-
                     </Row>
                     <Tabs defaultActiveKey="itinerario" id="justify-tab-content" className="mb-3" justify>
                         <Tab className="" eventKey="itinerario" title={<span className="tabs-tour"><BsCalendar /> Itinerario</span>}>
@@ -150,7 +147,7 @@ function ToursPage() {
                                 </Container>
                             )}
                         </Tab>
-                        <Tab className="" eventKey="informacion" title={<span className="tabs-tour"><BsInfoCircle /> Informacion</span>}>
+                        {/* <Tab className="" eventKey="informacion" title={<span className="tabs-tour"><BsInfoCircle /> Informacion</span>}>
                             <Row className="gap-4">
                                 {tourData.tamaño_grupo || tourData.Lugar_de_Recojo || tourData.ubicaciones || (tourData.Idiomas_Disponibles && tourData.Idiomas_Disponibles.length > 0) ? (
                                     <Card className="border-0">
@@ -161,7 +158,7 @@ function ToursPage() {
                                     </Card>
                                 ) : null}
                             </Row>
-                        </Tab>
+                        </Tab> */}
                         <Tab className="" eventKey="incluye" title={<span className="tabs-tour"><BsCheckCircle /> Incluye</span>}>
                             <Row className="gap-4 mt-4">
                                 <Accordion defaultActiveKey="0" className="p-0">

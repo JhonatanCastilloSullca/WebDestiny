@@ -3,11 +3,24 @@ import { NavLink } from 'react-router-dom';
 import { FaFacebook } from 'react-icons/fa';
 import { Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
 function Footer() {
     const { t } = useTranslation();
     return (
         <>
+            <FloatingWhatsApp
+                phoneNumber={999999999}
+                accountName="Asesor Destiny Travel"
+                avatar="https://www.w3schools.com/howto/img_avatar.png"
+                chatMessage="Hola soy un agente de Destiny Travel"
+                darkMode={false}
+                allowClickAway={true}
+                allowEsc={true}
+                size="56px"
+                backgroundColor="#25D366"
+                iconColor="#FFFFFF"
+            />
             <div className="footer-prueba">
             </div>
             <div className="vertigo-trekking-quote"></div>

@@ -24,7 +24,7 @@ function Servicios() {
                                 <h6 className="small-section-title text-start text-primary text-uppercase">Sobre Nosotros</h6>
                                 <span className="subheading text-gray">{GeneralData.titulo}</span>
                                 <div className="incluye-tours" dangerouslySetInnerHTML={{ __html: GeneralData.subtitulo }}></div>
-                                <a href="#" className="btn btn-primary py-3 px-4 mt-4">{t("buttons.revisa-nuestros-tours")}</a>
+                                {/* <a href="#" className="btn btn-primary py-3 px-4 mt-4">{t("buttons.revisa-nuestros-tours")}</a> */}
                             </div>
                         </div>
                     </div>
