@@ -17,8 +17,8 @@ function ToursArchive() {
         }
     };
 
-    const { data: GeneralData, loading: generalLoading, error: generalError } = useFetch("https://api.vertigotravelperu.com/api/categorias", requestOptions);
-    const { data: tourData, loading: tourLoading, error: tourError } = useFetch("https://api.vertigotravelperu.com/api/tours", requestOptions);
+    const { data: GeneralData, loading: generalLoading, error: generalError } = useFetch("https://api.machupicchudestinytravel.com/api/categorias", requestOptions);
+    const { data: tourData, loading: tourLoading, error: tourError } = useFetch("https://api.machupicchudestinytravel.com/api/tours", requestOptions);
 
 
     const [filteredCount, setFilteredCount] = useState(0);

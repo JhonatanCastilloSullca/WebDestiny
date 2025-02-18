@@ -13,7 +13,7 @@ export const GeneralProvider = ({ children }) => {
             language_id: languageId
         }
     };
-    const { data, loading, error } = useFetch("https://api.vertigotravelperu.com/api/general", requestOptions);
+    const { data, loading, error } = useFetch("https://api.machupicchudestinytravel.com/api/general", requestOptions);
     const general = data;
 
     if (loading) {

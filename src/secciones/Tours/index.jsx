@@ -23,7 +23,7 @@ function Tours() {
             language_id: languageId,
         }
     };
-    const { data, loading, error } = useFetch("https://api.vertigotravelperu.com/api/tours", requestOptions);
+    const { data, loading, error } = useFetch("https://api.machupicchudestinytravel.com/api/tours", requestOptions);
     const ToursData = data;
     if (loading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>

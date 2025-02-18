@@ -24,7 +24,7 @@ function PaquetePage() {
         method: 'POST',
 
     };
-    const { data: paqueteData, loading, error } = useFetch(`https://api.vertigotravelperu.com/api/ubicacion-slug?language_id=1&slug=${paqueteSlug}`, requestOptions);
+    const { data: paqueteData, loading, error } = useFetch(`https://api.machupicchudestinytravel.com/api/ubicacion-slug?language_id=1&slug=${paqueteSlug}`, requestOptions);
 
 
 

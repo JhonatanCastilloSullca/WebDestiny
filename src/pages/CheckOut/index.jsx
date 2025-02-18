@@ -105,7 +105,7 @@ function CheckOutPage() {
                     cliente: formData,
                     total: subtotal
                 };
-                const response = await fetch('https://api.vertigotravelperu.com/api/niubiz', {
+                const response = await fetch('https://api.machupicchudestinytravel.com/api/niubiz', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

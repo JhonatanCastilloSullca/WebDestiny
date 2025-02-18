@@ -37,7 +37,7 @@ function ToursPage() {
     };
 
 
-    const { data: tourData, loading, error } = useFetch(`https://api.vertigotravelperu.com/api/tour-slug?slug=${tourId}`, requestOptions);
+    const { data: tourData, loading, error } = useFetch(`https://api.machupicchudestinytravel.com/api/tour-slug?slug=${tourId}`, requestOptions);
 
     if (loading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
