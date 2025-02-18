@@ -1,5 +1,6 @@
 import './index.css'
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube, EffectCards } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -27,7 +28,7 @@ function Destinos() {
     }, [currentUbicacion]);
 
     const { t } = useTranslation();
-    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : null;
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : 1;
     const requestOptions = {
         method: 'POST',
         body: {
@@ -52,7 +53,7 @@ function Destinos() {
     if (!GeneralData) return <div>{t("buttons.no-se-encontraron")}</div>;
     return (
         <>
-            <div className="ftco-section img ftco-select-destination destination-banner  " style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <div className="ftco-section img ftco-select-destination destination-banner  " style={{ backgroundImage: `url(https://images5.alphacoders.com/361/thumb-1920-361088.jpg)` }}>
                 <div className="container">
                     <div className="row justify-content-center pb-4 container-text-destinos">
                         <div className="col-md-12 heading-section text-center ">
@@ -64,20 +65,21 @@ function Destinos() {
                 <div className="container container-destinos-padding-top" >
                     <div className="row justify-content-center pb-4">
                         <div className="row justify-content-between">
-                            <Col md={4}>
+                            <Col md={9}>
                                 <Swiper
-                                    effect={'cards'}
-                                    grabCursor={true}
+                                    slidesPerView={3}
+                                    spaceBetween={30}
+                                    pagination={{
+                                        clickable: true,
+                                    }}
+                                    centeredSlides={true}
                                     autoplay={{
-                                        delay: 18000,
+                                        delay: 2500,
                                         disableOnInteraction: false,
                                     }}
-                                    modules={[EffectCards, Autoplay]}
+                                    navigation={true}
+                                    modules={[Autoplay, Pagination, Navigation]}
                                     className="mySwiper"
-                                    onSlideChange={(swiper) => {
-                                        const currentSlideIndex = swiper.activeIndex;
-                                        setCurrentUbicacion(GeneralData[currentSlideIndex]);
-                                    }}
                                 >
                                     {
                                         GeneralData.map((ubicacion) => (
@@ -100,22 +102,11 @@ function Destinos() {
                                     }
                                 </Swiper>
                             </Col>
-                            <Col md={6}>
-                                <Container>
-                                    <Row>
-                                        <div className="row justify-content-center pb-4 container-text-destinos">
-
-                                            <div className="col-md-12 heading-section text-center ">
-                                                <span className="subheading">{titulo}</span>
-                                                <h5 className="mb-4 text-light">{descripcion}</h5>
-                                            </div>
-                                            <NavLink to={`/paquete/${slug}`} className="text-center">
-                                                <Button variant="primary">Revisa los tours</Button>{' '}
-                                            </NavLink>
-
-                                        </div>
-                                    </Row>
-                                </Container>
+                            <Col md={3}>
+                                <div>
+                                    <h4 className='fw-bolder fs-60 lh-1 text-light'>Destinos perfectos</h4>
+                                    <span className='fw-normal fs-5 lh-1 text-light'>{"Encuentra el destino perfecto para tu proxima aventura en Perú"}</span>
+                                </div>
                             </Col>
                         </div>
                     </div>

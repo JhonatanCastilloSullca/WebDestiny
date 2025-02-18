@@ -4,7 +4,7 @@ import { DotLoader } from "react-spinners";
 
 export const GeneralContext = createContext();
 export const GeneralProvider = ({ children }) => {
-    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : 2;
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : 1;
 
     const requestOptions = {
         method: 'POST',

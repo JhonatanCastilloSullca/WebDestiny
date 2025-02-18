@@ -7789,6 +7789,10 @@ a.close.disabled {
     background-color: var(--primary) !important;
 }
 
+.bg-orange {
+    background-color: var(--orange) !important;
+}
+
 .bg-gray {
     background-color: var(--gray) !important;
 }
@@ -12616,12 +12620,20 @@ h5,
     }
 }
 
+.search-property-1 {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .search-property-1 .form-group {
     position: relative;
     margin-bottom: 0;
     width: 100%;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+
 
 @media (max-width: 767.98px) {
     .search-property-1 .form-group {
@@ -14691,4 +14703,28 @@ input[type="range"]::-ms-thumb {
     margin-top: 5px;
     align-self: start;
     /* Alinea el mensaje de error a la izquierda */
+}
+
+.lineadiseño {
+    flex: 1 1 0%;
+    height: 2px;
+    background: var(--primary);
+    border-radius: var(--primary);
+}
+
+.lineadiseñowhite {
+    flex: 1 1 0%;
+    height: 2px;
+    background: var(--white);
+    border-radius: var(--white);
+}
+
+.imgdiseño {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.line-09 {
+    line-height: 0.9;
 }

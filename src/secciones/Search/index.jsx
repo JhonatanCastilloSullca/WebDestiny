@@ -41,7 +41,7 @@ const SearchResultList = ({ results }) => {
 function Search() {
 
     const { t } = useTranslation("translation");
-    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : null;
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : 1;
     const [input, setInput] = useState("");
     const [results, setResults] = useState(""); const fetchData = (value) => {
         if (value.trim() === '') {
@@ -95,7 +95,7 @@ function Search() {
                                     <Col md={12} className="tab-wrap">
                                         <Tab.Content id="v-pills-tabContent">
                                             <Tab.Pane active id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-                                                <Form className="search-property-1">
+                                                <Form className="search-property-1" >
                                                     <Row >
                                                         <Col md className="d-flex">
                                                             <div className="form-group px-4 py-2 border-0">

@@ -9,7 +9,7 @@ import { DotLoader } from "react-spinners"
 function ToursArchive() {
 
 
-    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : null;
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : 1;
     const requestOptions = {
         method: 'POST',
         body: {

@@ -2,6 +2,11 @@ import { useContext } from 'react';
 import './index.css'
 import { GeneralContext } from '../../context/general';
 import { useTranslation } from 'react-i18next';
+import { MdDiscount, MdOutlineSecurity } from 'react-icons/md'
+import { BiSolidUserVoice } from 'react-icons/bi'
+import { GiFlyingFlag } from 'react-icons/gi'
+import { Card, Col, Row } from 'react-bootstrap'
+import { FaMedal } from 'react-icons/fa6'
 
 
 function Servicios() {
@@ -28,6 +33,54 @@ function Servicios() {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="container p-3 mt-4 pt-4">
+                    <Row className="">
+                        <Col md={3} className="d-flex justify-content-center ">
+                            <Card className="border-0 p-0 m-0 d-flex align-items-center">
+                                <div className="icon-container"><MdOutlineSecurity className='text-primary justify-content-center' /></div>
+                                <Card.Body className="border-0 p-0 m-0  d-flex align-items-center ">
+                                    <div className="content-description-services">
+                                        <Card.Title className="mb-1 fs-3 text-center">Seguridad</Card.Title>
+                                        <Card.Text className="mb-0 text-start pt-2 ">Nos preocupamos por la seguridad de nuestros clientes, por lo que contamos con vehículos y equipos en excelentes condiciones, y cumplimos con todas las medidas de seguridad necesarias.</Card.Text>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col md={3} className="d-flex justify-content-center ">
+                            <Card className="border-0 p-0 m-0 d-flex align-items-center">
+                                <div className="icon-container"><BiSolidUserVoice className='text-primary' /></div>
+                                <Card.Body className="border-0 p-0 m-0  d-flex align-items-center ">
+                                    <div className="content-description-services">
+                                        <Card.Title className="mb-1 fs-3 text-center">Atención al cliente</Card.Title>
+                                        <Card.Text className="mb-0 text-start pt-2 ">Nos preocupamos por la seguridad de nuestros clientes, por lo que contamos con vehículos y equipos en excelentes condiciones, y cumplimos con todas las medidas de seguridad necesarias.</Card.Text>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col md={3} className="d-flex justify-content-center ">
+                            <Card className="border-0 p-0 m-0 d-flex align-items-center">
+                                <div className="icon-container"><GiFlyingFlag className='text-primary' /></div>
+                                <Card.Body className="border-0 p-0 m-0  d-flex align-items-center ">
+                                    <div className="content-description-services">
+                                        <Card.Title className="mb-1 fs-3 text-center">Guías expertos</Card.Title>
+                                        <Card.Text className="mb-0 text-start pt-2 ">Nos preocupamos por la seguridad de nuestros clientes, por lo que contamos con vehículos y equipos en excelentes condiciones, y cumplimos con todas las medidas de seguridad necesarias.</Card.Text>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col md={3} className="d-flex justify-content-center ">
+                            <Card className="border-0 p-0 m-0 d-flex align-items-center">
+                                <div className="icon-container"><MdDiscount className='text-primary' /></div>
+                                <Card.Body className="border-0 p-0 m-0  d-flex align-items-center ">
+                                    <div className="content-description-services">
+                                        <Card.Title className="mb-1 fs-3 text-center">Calidad-precio</Card.Title>
+                                        <Card.Text className="mb-0 text-start pt-2 ">Nos preocupamos por la seguridad de nuestros clientes, por lo que contamos con vehículos y equipos en excelentes condiciones, y cumplimos con todas las medidas de seguridad necesarias.</Card.Text>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Row>
                 </div>
             </div>
         </>

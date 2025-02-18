@@ -17,9 +17,19 @@ function Testimonios() {
                 <div className="overlay"></div>
                 <div className="container">
                     <div className="row justify-content-center pb-4">
-                        <div className="col-md-7 text-center heading-section heading-section-white ">
+                        <div className="col-md-7 text-center heading-section heading-section-white  d-flex flex-column align-items-center  ">
                             <span className="subheading">{t("testimonios.testimonios")}</span>
-                            <h2 className="mb-4">{t("testimonios.comentario-turisticos")}</h2>
+                            <h2 className="line-09">{t("testimonios.comentario-turisticos")}</h2>
+                            <div className='d-flex gap-2 w-50 justify-content-center align-items-center'>
+                                <div className="lineadiseñowhite">
+                                </div>
+                                <div className="">
+                                    <img src="src\assets\images\loc.png" alt="" className='imgdiseño' />
+                                </div>
+                                <div className="lineadiseñowhite">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="row ">

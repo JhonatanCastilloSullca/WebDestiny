@@ -161,56 +161,53 @@ function ToursPage() {
                         </Tab> */}
                         <Tab className="" eventKey="incluye" title={<span className="tabs-tour"><BsCheckCircle /> Incluye</span>}>
                             <Row className="gap-4 mt-4">
-                                <Accordion defaultActiveKey="0" className="p-0">
-                                    <Accordion.Item eventKey="0">
-                                        <Accordion.Header className="incluye-accordion "><h3 className="box-title border-0 mb-0">Incluye</h3></Accordion.Header>
-                                        <Accordion.Body>
-                                            <Row>
-                                                <Col>
-                                                    <Row className="pt-4">
-                                                        <div className="incluye-tours" dangerouslySetInnerHTML={{ __html: tourData.incluye }}></div>
-                                                    </Row>
-                                                </Col>
-                                            </Row>
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                </Accordion>
+                                <Container className="">
+                                    <h3 className="box-title m-0">Incluye</h3>
+                                    <Accordion defaultActiveKey="0" className="pt-4">
+                                        <Row>
+                                            <Col>
+                                                <Row className="">
+                                                    <div className="incluye-tours" dangerouslySetInnerHTML={{ __html: tourData.incluye }}></div>
+                                                </Row>
+                                            </Col>
+                                        </Row>
+                                    </Accordion>
+                                </Container>
                             </Row>
                         </Tab>
                         <Tab className="" eventKey="no-incluye" title={<span className="tabs-tour"><BsCheckCircle /> No Incluye</span>}>
                             <Row className="gap-4 mt-4">
-                                <Accordion defaultActiveKey="0" className="p-0">
-                                    <Accordion.Item eventKey="0">
-                                        <Accordion.Header className="incluye-accordion "><h3 className="box-title border-0 mb-0">No Incluye</h3></Accordion.Header>
-                                        <Accordion.Body>
-                                            <Row>
-                                                {tourData.noincluye && (
-                                                    <Col>
-                                                        <Row className="pt-4">
-                                                            <div className="noincluye-tours" dangerouslySetInnerHTML={{ __html: tourData.noincluye }}></div>
-                                                        </Row>
-                                                    </Col>
-                                                )}
-                                            </Row>
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                </Accordion>
+                                <Container className="">
+                                    <h3 className="box-title m-0">No Incluye</h3>
+                                    <Accordion defaultActiveKey="0" className="pt-4">
+                                        <Row>
+                                            <Col>
+                                                <Row className="pt-4">
+                                                    <div className="noincluye-tours" dangerouslySetInnerHTML={{ __html: tourData.noincluye }}></div>
+                                                </Row>
+                                            </Col>
+                                        </Row>
+                                    </Accordion>
+                                </Container>
                             </Row>
                         </Tab>
                         <Tab className="" eventKey="que-llevar" title={<span className="tabs-tour"><BsCheckCircle /> Que llevar</span>}>
                             <Row className="gap-4 mt-4">
-                                <Accordion defaultActiveKey="0" className="p-0">
-                                    <Accordion.Item eventKey="0">
-                                        <Accordion.Header className="incluye-accordion "><h3 className="box-title border-0 mb-0">Qué Llevar</h3></Accordion.Header>
-                                        <Accordion.Body>
-                                            <Row className="pt-4">
-                                                <div className="description-tours recomendation-tours" dangerouslySetInnerHTML={{ __html: tourData.recomendaciones }}>
-                                                </div>
-                                            </Row>
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                </Accordion>
+                                <Container className="">
+                                    <h3 className="box-title m-0">Que llevar</h3>
+                                    <Accordion defaultActiveKey="0" className="pt-4">
+                                        <Row>
+                                            <Col>
+                                                <Row className="pt-4">
+                                                    <div className="description-tours recomendation-tours" dangerouslySetInnerHTML={{ __html: tourData.recomendaciones }}>
+                                                    </div>
+                                                </Row>
+                                            </Col>
+                                        </Row>
+                                    </Accordion>
+                                </Container>
                             </Row>
+
                         </Tab>
                         <Tab className="" eventKey="contact" title={<span className="tabs-tour"><BsEnvelope /> Contact</span>} >
                             <FormularioContacto handleSubmit={handleSubmit} />

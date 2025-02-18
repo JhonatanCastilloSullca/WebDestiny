@@ -91,13 +91,13 @@
 }
 
 .nav-link.active {
-    color: var(--orange) !important;
+    color: var(--primary) !important;
     font-weight: bold !important;
 }
 
 .nav-link:focus,
 .nav-link:hover {
-    color: var(--orange);
+    color: var(--primary);
 }
 
 .dropdown-item>.nav-link {
