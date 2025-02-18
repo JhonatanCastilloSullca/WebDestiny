@@ -61,7 +61,7 @@ function Tours() {
                         <CardTours tours={getRandomTours(ToursData, 3)} md={4} />
                         <Col className='pt-4'>
                             <p className='align-items-center justify-content-center d-flex'>
-                                <NavLink to={`/tours`} className='btn btn-primary py-3 px-4'>
+                                <NavLink to={`/tours`} className='btn btn-orange py-3 px-4'>
                                     {t("tours.revisa-nuestros-tours")}
                                 </NavLink>
                             </p>

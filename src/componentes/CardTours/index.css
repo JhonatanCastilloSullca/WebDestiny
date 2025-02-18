@@ -62,7 +62,7 @@
 
 .text-precio-data {
     font-size: 20px;
-    color: var(--primary);
+    color: var(--orange);
     font-weight: 800;
 }
 
@@ -70,7 +70,7 @@
 .ba-meta {
     margin-top: 20px;
     padding: 10px 18px;
-    background: var(--primary);
+    background: var(--orange);
     border-radius: 6px;
     width: 97%;
     display: -webkit-box;

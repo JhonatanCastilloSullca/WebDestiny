@@ -3123,6 +3123,18 @@ fieldset:disabled a.btn {
     pointer-events: none;
 }
 
+.btn-orange {
+    color: #fff;
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.btn-orange:hover {
+    color: #fff;
+    background-color: var(--orange);
+    border-color: #0062cc;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #007bff;
@@ -12888,7 +12900,7 @@ h5,
     bottom: 400px;
     right: -5px;
     display: inline-block;
-    background: var(--primary);
+    background: var(--orange);
     padding: 4px 5px 4px 15px;
     border-radius: 20px 0 0 20px;
     color: #fff;
