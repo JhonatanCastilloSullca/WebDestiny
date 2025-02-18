@@ -99,7 +99,7 @@ function ToursPage() {
                 </Swiper>
 
             </div>
-            <Container className="bg-primary mw-100">
+            <Container className="bg-orangenp mw-100">
                 <ToursInfoSection
                     titulo={tourData.nombre}
                     duracion={tourData.duracion}
@@ -136,7 +136,7 @@ function ToursPage() {
                                         {detallesTourDias.map((detalle, index) => (
                                             <Accordion.Item key={index} eventKey={String(index)}>
                                                 <Accordion.Header>
-                                                    <h6 className="fw-bold text-primary">Día {index + 1}: {detalle.titulo}</h6>
+                                                    <h6 className="fw-bold text-orange">Día {index + 1}: {detalle.titulo}</h6>
                                                 </Accordion.Header>
                                                 <Accordion.Body>
                                                     <div className="incluye-tours" dangerouslySetInnerHTML={{ __html: detalle.descripcion }}></div>

@@ -11862,6 +11862,10 @@ button.bg-dark:focus {
     color: var(--primary) !important;
 }
 
+.text-orange {
+    color: var(--orange) !important;
+}
+
 a.text-primary:hover,
 a.text-primary:focus {
     color: #0056b3 !important;

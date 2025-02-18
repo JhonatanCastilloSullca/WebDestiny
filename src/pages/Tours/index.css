@@ -309,5 +309,5 @@
 }
 
 .nav-link.active>.tabs-tour {
-    color: var(--primary) !important;
+    color: var(--orange) !important;
 }
