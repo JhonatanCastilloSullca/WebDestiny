@@ -132,7 +132,7 @@ function Header() {
             {
                 navbar ? (
                     <Row className='w-100 m-0 fixed-navbar navbar'>
-                        <Col md={12} className='bg-primary d-flex justify-content-center align-items-center p-0'>
+                        <Col md={12} className='bg-orange d-flex justify-content-center align-items-center p-0'>
                             <Nav className="d-flex align-items-center text-white">
                                 <li className="nav-item d-flex align-items-center text-white">
                                     <NavLink to='/' className={({ isActive }) => {
@@ -247,7 +247,7 @@ function Header() {
                                 </Container>
                             </Container>
                         </Col>
-                        <Col md={12} className='bg-primary d-flex justify-content-center align-items-center p-0'>
+                        <Col md={12} className='bg-orange d-flex justify-content-center align-items-center p-0'>
                             <Nav className="d-flex align-items-center text-white">
                                 <li className="nav-item d-flex align-items-center text-white">
                                     <NavLink to='/' className={({ isActive }) => {

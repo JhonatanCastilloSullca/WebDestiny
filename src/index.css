@@ -7789,6 +7789,10 @@ a.close.disabled {
     background-color: var(--primary) !important;
 }
 
+.bg-orange {
+    background-color: var(--orange) !important;
+}
+
 .bg-gray {
     background-color: var(--gray) !important;
 }
@@ -12622,6 +12626,8 @@ h5,
     width: 100%;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+
 
 @media (max-width: 767.98px) {
     .search-property-1 .form-group {
