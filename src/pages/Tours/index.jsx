@@ -99,7 +99,7 @@ function ToursPage() {
                 </Swiper>
 
             </div>
-            <Container className="bg-orangenp mw-100">
+            <Container className="bg-orange mw-100">
                 <ToursInfoSection
                     titulo={tourData.nombre}
                     duracion={tourData.duracion}

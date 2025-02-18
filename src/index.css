@@ -14724,8 +14724,8 @@ input[type="range"]::-ms-thumb {
 .lineadiseño {
     flex: 1 1 0%;
     height: 2px;
-    background: var(--primary);
-    border-radius: var(--primary);
+    background: var(--orange);
+    border-radius: var(--orange);
 }
 
 .lineadiseñowhite {
