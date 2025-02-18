@@ -9,7 +9,7 @@ import { DotLoader } from "react-spinners"
 function ToursArchive() {
 
 
-    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : null;
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : 1;
     const requestOptions = {
         method: 'POST',
         body: {
@@ -17,8 +17,8 @@ function ToursArchive() {
         }
     };
 
-    const { data: GeneralData, loading: generalLoading, error: generalError } = useFetch("https://api.vertigotravelperu.com/api/categorias", requestOptions);
-    const { data: tourData, loading: tourLoading, error: tourError } = useFetch("https://api.vertigotravelperu.com/api/tours", requestOptions);
+    const { data: GeneralData, loading: generalLoading, error: generalError } = useFetch("https://api.machupicchudestinytravel.com/api/categorias", requestOptions);
+    const { data: tourData, loading: tourLoading, error: tourError } = useFetch("https://api.machupicchudestinytravel.com/api/tours", requestOptions);
 
 
     const [filteredCount, setFilteredCount] = useState(0);

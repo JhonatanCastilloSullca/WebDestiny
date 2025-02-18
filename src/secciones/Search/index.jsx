@@ -41,7 +41,7 @@ const SearchResultList = ({ results }) => {
 function Search() {
 
     const { t } = useTranslation("translation");
-    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : null;
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : 1;
     const [input, setInput] = useState("");
     const [results, setResults] = useState(""); const fetchData = (value) => {
         if (value.trim() === '') {
@@ -57,7 +57,7 @@ function Search() {
             language_id: languageId
         }
 
-        fetch("https://api.vertigotravelperu.com/api/tours", {
+        fetch("https://api.machupicchudestinytravel.com/api/tours", {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(body),

@@ -28,7 +28,7 @@ function CheckOutValid() {
         body: JSON.stringify({
         })
     };
-    const { data, loading, error } = useFetch(`https://api.vertigotravelperu.com/api/confirmar-pago?id=${id}`, requestOptions);
+    const { data, loading, error } = useFetch(`https://api.machupicchudestinytravel.com/api/confirmar-pago?id=${id}`, requestOptions);
 
     const blogs = data;
     if (loading) return <div className="mainloader">

@@ -48,28 +48,36 @@ function NosotrosPage() {
             <div className="ftco-section services-section pt-4 descriptio-tour-container">
                 <Container>
                     <Row>
-                        <Col md={6}>
+                        <Col md={12}>
                             <div className="d-grid gap-4">
-                                <div className="w-100 d-flex justify-content-between align-items-center gap-4 pt-2 px-4 border border-4 rounded-2">
-                                    <FaMedal className="icono-nosotros text-dark" />
-                                    <div className="text-nosotros px-2" dangerouslySetInnerHTML={{ __html: GeneralData.descripcion1 }}>
-                                    </div>
-                                </div>
-                                <div className="w-100 d-flex justify-content-between align-items-center gap-4 pt-2 px-4 border border-4 rounded-2">
-                                    <div className="text-nosotros px-2" dangerouslySetInnerHTML={{ __html: GeneralData.descripcion2 }}>
+                                <Row>
+                                    <Col md={4}>
+                                        <div className="w-100 d-flex justify-content-between align-items-center gap-4 pt-2 px-4 border border-4 rounded-2">
+                                            <FaMedal className="icono-nosotros text-dark" />
+                                            <div className="text-nosotros px-2" dangerouslySetInnerHTML={{ __html: GeneralData.descripcion1 }}>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col md={4}>
+                                        <div className="w-100 d-flex justify-content-between align-items-center gap-4 pt-2 px-4 border border-4 rounded-2">
+                                            <FaUserGraduate className="icono-nosotros text-dark" />
+                                            <div className="text-nosotros px-2" dangerouslySetInnerHTML={{ __html: GeneralData.descripcion2 }}>
 
-                                    </div>
-                                    <FaUserGraduate className="icono-nosotros text-dark" />
-                                </div>
-                                <div className="w-100 d-flex justify-content-between align-items-center gap-4 pt-2 px-4 border border-4 rounded-2">
-                                    <FaClockRotateLeft className="icono-nosotros text-dark" />
-                                    <div className="text-nosotros px-2" dangerouslySetInnerHTML={{ __html: GeneralData.descripcion3 }}>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col md={4}>
+                                        <div className="w-100 d-flex justify-content-between align-items-center gap-4 pt-2 px-4 border border-4 rounded-2">
+                                            <FaClockRotateLeft className="icono-nosotros text-dark" />
+                                            <div className="text-nosotros px-2" dangerouslySetInnerHTML={{ __html: GeneralData.descripcion3 }}>
 
-                                    </div>
-                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
                             </div>
                         </Col>
-                        <Col md={6} className='d-flex align-items-center'>
+                        {/* <Col md={6} className='d-flex align-items-center'>
                             <div className="w-100">
                                 <Swiper
                                     modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
@@ -110,7 +118,7 @@ function NosotrosPage() {
 
                                 </Swiper>
                             </div>
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </div>

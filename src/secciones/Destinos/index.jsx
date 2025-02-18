@@ -28,14 +28,14 @@ function Destinos() {
     }, [currentUbicacion]);
 
     const { t } = useTranslation();
-    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : null;
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : 1;
     const requestOptions = {
         method: 'POST',
         body: {
             language_id: languageId
         }
     };
-    const { data, loading, error } = useFetch("https://api.vertigotravelperu.com/api/ubicaciones", requestOptions);
+    const { data, loading, error } = useFetch("https://api.machupicchudestinytravel.com/api/ubicaciones", requestOptions);
     const GeneralData = data;
     if (loading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>

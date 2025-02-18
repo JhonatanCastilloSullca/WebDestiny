@@ -15,7 +15,7 @@ function getRandomTours(tours, count) {
 }
 function Tours() {
     const { t } = useTranslation();
-    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : null;
+    const languageId = localStorage.lng === 'es' ? 1 : localStorage.lng === 'en' ? 2 : 1;
 
     const requestOptions = {
         method: 'POST',
@@ -23,7 +23,7 @@ function Tours() {
             language_id: languageId,
         }
     };
-    const { data, loading, error } = useFetch("https://api.vertigotravelperu.com/api/tours", requestOptions);
+    const { data, loading, error } = useFetch("https://api.machupicchudestinytravel.com/api/tours", requestOptions);
     const ToursData = data;
     if (loading) return <div className="mainloader">
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
@@ -41,9 +41,20 @@ function Tours() {
             <div className="ftco-section pt-0">
                 <div className="container">
                     <div className="row justify-content-center pb-4">
-                        <div className="col-md-12 heading-section text-center ">
-                            <span className="subheading">{t("tours.destinos")}</span>
-                            <h2 className="mb-4">{t("tours.nuestros-tours")}</h2>
+                        <div className="col-md-12 heading-section text-center d-flex flex-column align-items-center ">
+                            <span className="subheading mt-4">{t("tours.destinos")}</span>
+                            <h2 className="line-09">{t("tours.nuestros-tours")}</h2>
+                            <div className='d-flex gap-2 w-50 justify-content-center align-items-center'>
+                                <div className="lineadiseño">
+
+                                </div>
+                                <div className="">
+                                    <img src="src\assets\images\loc.png" alt="" className='imgdiseño' />
+                                </div>
+                                <div className="lineadiseño">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="row">
